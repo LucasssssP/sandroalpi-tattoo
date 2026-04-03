@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tattoo Studio — Arte na Pele</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MENU LATERAL MOBILE -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebar-close">✕</button>
+  <nav>
+    <ul>
+      <li><a href="#contato">Agendamento</a></li>
+      <li><a href="#studio">O Studio</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#sobre-profissional">Eu Sandro</a></li>
+      <li><a href="#avaliacoes">Depoimentos</a></li>
+    </ul>
+  </nav>
+</div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Tattoo Studio</h1>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#contato">Agendamento</a></li>
+          <li><a href="#studio">O Studio</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#sobre-profissional">Eu Sandro</a></li>
+          <li><a href="#avaliacoes">Depoimentos</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- FORMULÁRIO DE CONTATO -->
+  <section class="contact" id="contato">
+    <div class="container contact-content">
+
+      <div class="contact-form">
+        <p class="section-subtitle">Agende sua sessão</p>
+        <h2>Agende sua<br>Tattoo</h2>
+        <p>Preencha o formulário e entraremos em contato</p>
+
+        <form id="contact-form">
+  <input type="text"  id="nome"      placeholder="Seu nome"      required>
+  <input type="email" id="email"     placeholder="Seu email"     required>
+  <input type="tel"   id="whatsapp"  placeholder="Seu WhatsApp"  required>
+  <button type="submit">Enviar mensagem</button>
+  <p id="form-msg" style="display:none; font-size:13px; margin-top:8px;"></p>
+</form>
+      </div>
+
+      <div class="contact-image">
+        <img src="assets/images/studio2.png" alt="Tatuador">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STUDIO -->
+  <section class="studio" id="studio">
+    <div class="container studio-content">
+
+      <div class="carousel">
+        <div class="carousel-images" id="carousel-images">
+          <img src="assets/images/studio1.png" alt="Studio 1">
+          <img src="assets/images/studio2.png" alt="Studio 2">
+        </div>
+        <button class="prev" id="prev">‹</button>
+        <button class="next" id="next">›</button>
+      </div>
+
+      <div class="studio-text">
+        <p class="section-subtitle" style="text-align:left; margin-bottom:12px;">O espaço</p>
+        <h2>Nosso Estúdio</h2>
+        <p>
+          Um espaço pensado para proporcionar conforto, segurança e uma experiência única.
+          Trabalhamos com materiais de alta qualidade e seguimos rigorosos padrões de higiene.
+        </p>
+        <p>
+          Cada detalhe foi planejado para que você se sinta à vontade enquanto transforma sua ideia em arte.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <p class="section-subtitle">Trabalhos realizados</p>
+      <h2 class="section-title">Portfólio</h2>
+      <span class="section-divider"></span>
+
+      <div class="portfolio-grid">
+        <img src="assets/images/studio1.png" alt="Tattoo 1">
+        <img src="assets/images/studio2.png" alt="Tattoo 2">
+        <img src="assets/images/studio1.png" alt="Tattoo 3">
+        <img src="assets/images/studio2.png" alt="Tattoo 4">
+        <img src="assets/images/studio1.png" alt="Tattoo 5">
+        <img src="assets/images/studio2.png" alt="Tattoo 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre-profissional">
+    <div class="container">
+      <div class="about-card">
+
+        <div class="about-image">
+          <img src="assets/images/studio1.png" alt="Tatuador">
+        </div>
+
+        <div class="about-text">
+          <p class="section-subtitle" style="text-align:left; margin-bottom:12px;">O artista</p>
+          <h2>Sobre o Artista</h2>
+          <p>
+            Com anos de experiência na arte da tatuagem, nosso trabalho é focado em
+            criar peças únicas que representam a identidade de cada cliente.
+          </p>
+          <p>
+            Especializado em estilos modernos e personalizados, buscamos sempre
+            excelência em cada detalhe, desde o atendimento até o resultado final.
+          </p>
+          <p>
+            Nosso compromisso é transformar ideias em arte com qualidade,
+            segurança e originalidade.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="reviews" id="avaliacoes">
+    <div class="container">
+      <p class="section-subtitle">O que dizem</p>
+      <h2 class="section-title">Depoimentos</h2>
+      <span class="section-divider"></span>
+
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <p>"Trabalho impecável! Atendimento excelente e resultado perfeito."</p>
+          <h4>— João Silva ⭐⭐⭐⭐⭐</h4>
+        </div>
+
+        <div class="review-card">
+          <p>"Melhor tatuador da região, ambiente muito profissional."</p>
+          <h4>— Maria Souza ⭐⭐⭐⭐⭐</h4>
+        </div>
+
+        <div class="review-card">
+          <p>"Fiquei impressionado com a qualidade e atenção aos detalhes."</p>
+          <h4>— Carlos Lima ⭐⭐⭐⭐⭐</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="location" id="localizacao">
+    <div class="container">
+      <p class="section-subtitle">Onde estamos</p>
+      <h2 class="section-title">Onde Estou</h2>
+      <span class="section-divider"></span>
+
+      <div class="map-content">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps?q=Sandro+AlPi+Tattoo,+R.+Luiz+de+Camões,+234+-+sala+14+-+Encruzilhada,+Santos+-+SP,+11015-400&output=embed"
+            width="100%"
+            height="340"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+        <h2>Tattoo Studio</h2>
+        <p>Arte na pele com identidade e qualidade.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#studio">Studio</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <p>WhatsApp: (13) 99999-9999</p>
+        <p>Email: contato@email.com</p>
+      </div>
+
+      <div class="footer-social">
+        <h3>Redes</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Tatuador Sandro Alpi</p>
+      <p>© Site feito por Lucas @lucaspac0</p>
+    </div>
+    <!-- CHAT FLUTUANTE -->
+<button class="chat-bubble" id="chat-bubble">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+  </svg>
+</button>
+
+<div class="chat-window" id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-header-name">Sandrinho - Assistente IA</div>
+        <div class="chat-header-status">● online</div>
+      </div>
+    </div>
+    <button class="chat-close" id="chat-close">✕</button>
+  </div>
+
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-msg bot">Olá! Sou o Sandrinho, assistente do Tatuador Sandro Alpi. Como posso te ajudar? 🖤</div>
+  </div>
+
+  <div class="chat-input-area">
+    <input class="chat-input" id="chat-input" type="text" placeholder="Digite sua mensagem...">
+    <button class="chat-send" id="chat-send">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+  </footer>
+<script src="js/script.js"></script>
+</body>
+</html>
