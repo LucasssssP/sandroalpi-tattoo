@@ -975,3 +975,10 @@ h1, h2, h3, h4 {
   height: 16px;
   fill: var(--bg-main);
 }
+
+/* ─── FIX TECLADO MOBILE WEBVIEW ────────────────────────── */
+@supports (-webkit-touch-callout: none) {
+  .chat-window {
+    max-height: 60dvh;
+  }
+}

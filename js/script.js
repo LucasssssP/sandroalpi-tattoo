@@ -163,3 +163,11 @@ try {
     addMsg('Erro ao conectar. Tente novamente.', 'bot');
   }
 }
+
+// FIX TECLADO WEBVIEW
+chatInput.addEventListener('focus', () => {
+  setTimeout(() => {
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 300);
+});
