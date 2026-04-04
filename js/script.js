@@ -154,7 +154,9 @@ try {
     })
   });
 
-    const data = await res.json();
+    
+    const text = await res.text();
+    const data = JSON.parse(text);
     typing.remove();
     addMsg(data.output || 'Não entendi, pode repetir?', 'bot');
 
