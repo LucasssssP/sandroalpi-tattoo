@@ -90,7 +90,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   }
 
   // ABRE WHATSAPP
-  const numeroTatuador = "5513999999999"; // 🔥 TROCAR AQUI
+  const numeroTatuador = "5513988066658"; // 🔥 TROCAR AQUI
   const mensagem = `Olá, meu nome é ${nome}.\nEmail: ${email}\nWhatsApp: ${whatsapp}\n\nGostaria de agendar uma tatuagem!`;
   window.open(`https://wa.me/${numeroTatuador}?text=${encodeURIComponent(mensagem)}`, "_blank");
 
@@ -139,26 +139,31 @@ async function enviarMensagem() {
 
   const typing = addMsg('...', 'typing');
 
-try {
-  const res = await fetch(WEBHOOK_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      mensagem: texto,
-      sessionId: 'user_' + (localStorage.getItem('chatSession') || (() => {
-        const id = Date.now().toString();
-        localStorage.setItem('chatSession', id);
-        return id;
-      })()),
-      historico: 'O assistente já se apresentou com a mensagem: "Olá! Sou o Sandrinho, assistente do Sandro Alpi. Como posso te ajudar? 🖤". Não se apresente novamente.'
-    })
-  });
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        mensagem: texto,
+        sessionId: 'user_' + (localStorage.getItem('chatSession') || (() => {
+          const id = Date.now().toString();
+          localStorage.setItem('chatSession', id);
+          return id;
+        })()),
+        historico: 'O assistente já se apresentou com a mensagem: "Olá! Sou o Sandrinho, assistente do Sandro Alpi. Como posso te ajudar? 🖤". Não se apresente novamente.'
+      })
+    });
 
-    
     const text = await res.text();
     const data = JSON.parse(text);
     typing.remove();
-    addMsg(data.output || 'Não entendi, pode repetir?', 'bot');
+
+    // Lê o output — compatível com ambos os formatos de resposta do n8n
+    const output = data.outputJSON
+      ? JSON.parse(data.outputJSON).output
+      : data.output;
+
+    addMsg(output || 'Não entendi, pode repetir?', 'bot');
 
   } catch (err) {
     typing.remove();
